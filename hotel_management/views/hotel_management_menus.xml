@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <menuitem id="hotel_root" name="Hotel Management">
+        <menuitem id="hotel_menu" name="Hotel">
+            <menuitem id="hotel_list" action="hotel_list_action" />
+        </menuitem>
+        <menuitem id="hotel_contact_us_menu" name="Contact Us">
+            <menuitem id="hotel_contact_us" action="hotel_contact_us_action"/>
+        </menuitem>
+    </menuitem>
+</odoo>

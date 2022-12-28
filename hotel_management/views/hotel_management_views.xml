@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="hotel_list_action" model="ir.actions.act_window">
+            <field name="name">Hotel List</field>
+            <field name="res_model">hotel.management</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record id="hotel_contact_us_action" model="ir.actions.act_window">
+            <field name="name">Help</field>
+            <field name="res_model">hotel.management</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record id="hotel_management_tree" model="ir.ui.view">
+            <field name="name">Hotel Management Tree</field>
+            <field name="model">hotel.management</field>
+            <field name="arch" type="xml">
+                <tree expand="1">
+                    <field name="hotel_name"/>
+                    <field name="hotel_description"/>
+                    <field name="hotel_contact_number"/>
+                    <field name="hotel_address"/>
+                    <!-- <field name="hotel_menu" optional="hide"/> -->
+                    <field name="hotel_type" optional="hide"/>
+                </tree>
+            </field>
+        </record>
+        <record id="hotel_management_form" model="ir.ui.view">
+            <field name="name">Hotel management Form</field>
+            <field name="model">hotel.management</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <lable for="hotel_name">Hotel Name</lable>
+                        <h1>
+                            <field name="hotel_name"></field>
+                        </h1>
+                        <group>
+                            <group>
+                                <field name="hotel_contact_number"/>
+                                <field name="hotel_address"/>
+                            </group>
+                            <group>
+                                <field name="hotel_type"/>
+                                <field name="hotel_menu_type_ids" widget="many2many_tags"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Description">
+                                <field name="hotel_description"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

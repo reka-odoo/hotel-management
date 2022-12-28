@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record model="hotel.management.customer" id="hotel_menu_type_gujarati">
+        <field name="hotel_menu_type">Gujarati</field>
+    </record>
+    <record model="hotel.management.customer" id="hotel_menu_type_punjabi">
+        <field name="hotel_menu_type">Punjabi</field>
+    </record>
+    <record model="hotel.management.customer" id="hotel_menu_type_chinese">
+        <field name="hotel_menu_type">chinese</field>
+    </record>
+    <record model="hotel.management.customer" id="hotel_menu_type_italian">
+        <field name="hotel_menu_type">Italian</field>
+    </record>
+</odoo>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record model="hotel.management" id="hotel_management_data1">
+        <field name="hotel_name">Taj Hotel</field>
+        <field name="hotel_description">The Taj Mahal Palace is a heritage, five-star, luxury hotel in Mumbai</field>
+        <field name="hotel_contact_number">+91 (22) 6601 1825</field>
+        <field name="hotel_address">Apollo Bandar, Colaba, Mumbai, Maharashtra </field>
+    </record>
+</odoo>
