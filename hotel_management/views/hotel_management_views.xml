@@ -6,11 +6,17 @@
             <field name="res_model">hotel.management</field>
             <field name="view_mode">tree,form</field>
         </record>
-        <record id="hotel_contact_us_action" model="ir.actions.act_window">
-            <field name="name">Help</field>
-            <field name="res_model">hotel.management</field>
+        <record id="hotel_customer_list_action" model="ir.actions.act_window">
+            <field name="name">Customer List</field>
+            <field name="res_model">hotel.management.customer</field>
             <field name="view_mode">tree,form</field>
         </record>
+        <record id="hotel_staff_list_action" model="ir.actions.act_window">
+            <field name="name">Staff List</field>
+            <field name="res_model">hotel.management.staff</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+       
         <record id="hotel_management_tree" model="ir.ui.view">
             <field name="name">Hotel Management Tree</field>
             <field name="model">hotel.management</field>

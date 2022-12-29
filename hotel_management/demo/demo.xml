@@ -6,4 +6,25 @@
         <field name="hotel_contact_number">+91 (22) 6601 1825</field>
         <field name="hotel_address">Apollo Bandar, Colaba, Mumbai, Maharashtra </field>
     </record>
+    <record model="hotel.management" id="hotel_management_data2">
+        <field name="hotel_name">THE ST. REGIS MUMBAI</field>
+        <field name="hotel_description">The St. Regis Mumbai features the height of relaxation and rejuvenation in the form of a dedicated wellness floor.</field>
+        <field name="hotel_contact_number">022 6162 8000</field>
+        <field name="hotel_address">462, Senapati Bapat Marg, Lower Parel, Mumbai, Maharashtra 400013</field>
+    </record>
+
+    <record model="hotel.management.customer" id="hotel_management_customer_renil">
+        <field name="customer_name">Renil</field>
+        <field name="customer_mobile_number">1234567890</field>
+        <field name="date">2022-12-29</field>
+        <field name="table_number">7</field>
+        <field name="bill">10000</field>
+    </record>
+    <record model="hotel.management.customer" id="hotel_management_customer_abc">
+        <field name="customer_name">ABC</field>
+        <field name="customer_mobile_number">0987654321</field>
+        <field name="date">2022-12-30</field>
+        <field name="table_number">10</field>
+        <field name="bill">5000</field>
+    </record>
 </odoo>

@@ -4,8 +4,11 @@
         <menuitem id="hotel_menu" name="Hotel">
             <menuitem id="hotel_list" action="hotel_list_action" />
         </menuitem>
-        <menuitem id="hotel_contact_us_menu" name="Contact Us">
-            <menuitem id="hotel_contact_us" action="hotel_contact_us_action"/>
+        <menuitem id="hotel_customer_menu" name="Customer">
+            <menuitem id="hotel_customer_list" action="hotel_customer_list_action"/>
+        </menuitem>
+        <menuitem id="hotel_staff_menu" name="Staff">
+            <menuitem id="hotel_staff_list" action="hotel_staff_list_action"/>
         </menuitem>
     </menuitem>
 </odoo>

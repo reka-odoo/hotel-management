@@ -7,7 +7,8 @@
                 'security/ir.model.access.csv',
                 'views/hotel_management_views.xml',
                 'views/hotel_management_menus.xml',
-                'views/hotel_management_customer.xml'
+                'views/hotel_management_customer.xml',
+                'views/hotel_management_staff.xml'
                 ],
     'demo': [
                 'demo/demo.xml',
