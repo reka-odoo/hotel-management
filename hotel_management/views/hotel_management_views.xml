@@ -22,12 +22,13 @@
             <field name="model">hotel.management</field>
             <field name="arch" type="xml">
                 <tree expand="1">
-                    <field name="hotel_name"/>
+                    <field name="name"/>
                     <field name="hotel_description"/>
                     <field name="hotel_contact_number"/>
                     <field name="hotel_address"/>
                     <!-- <field name="hotel_menu" optional="hide"/> -->
                     <field name="hotel_type" optional="hide"/>
+                    <field name="postcode" optional="hide"/>
                 </tree>
             </field>
         </record>
@@ -37,23 +38,34 @@
             <field name="arch" type="xml">
                 <form>
                     <sheet>
-                        <lable for="hotel_name">Hotel Name</lable>
+                        <lable for="name">Hotel Name</lable>
                         <h1>
-                            <field name="hotel_name"></field>
+                            <field name="name"></field>
                         </h1>
                         <group>
                             <group>
                                 <field name="hotel_contact_number"/>
                                 <field name="hotel_address"/>
+                                <field name="postcode"/>
+                                <!-- <field name="hotel_timing"/> -->
                             </group>
                             <group>
                                 <field name="hotel_type"/>
-                                <field name="hotel_menu_type_ids" widget="many2many_tags"/>
+                                <field name="hotel_email"/>
+                                <field name="hotel_cuisine_ids" widget="many2many_tags"/>
                             </group>
                         </group>
                         <notebook>
                             <page string="Description">
                                 <field name="hotel_description"/>
+                            </page>
+                            <page string="Restaurant">
+                                <group>
+                                    <group>
+                                        <field name="restaurant"/>
+
+                                    </group>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>

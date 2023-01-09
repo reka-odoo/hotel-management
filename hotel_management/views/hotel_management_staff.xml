@@ -6,8 +6,9 @@
             <field name="model">hotel.management.staff</field>
             <field name="arch" type="xml">
                 <tree expand="1">
-                    <field name="staff_name"/>
+                    <field name="name"/>
                     <field name="staff_mobile_number"/>
+                    <field name="staff_joining_date"/>
                 </tree>
             </field>
         </record>
@@ -17,33 +18,40 @@
             <field name="arch" type="xml">
                 <form>
                     <sheet>
-                        <lable for="staff_name">Staff Name</lable>
+                        <lable for="name">Staff Name</lable>
                         <h1>
-                            <field name="staff_name"></field>
+                            <field name="name"></field>
                         </h1>
                         <group>
                             <group>
-                                <field name="staff_mobile_number"/>
-                                <!-- <field name="date"/> -->
+                                <field name="staff_type"/>
                             </group>
                             <group>
-                                <field name="staff_address"/>
+                                <field name="staff_joining_date"/>
                             </group>
                         </group>
                         <notebook>
                             <page string="Work Information">
                                 <group>
                                     <group>
-
+                                        <field name="staff_email"/>
                                     </group>
                                     <group>
-                                        
+                                        <field name="staff_salary"/>
                                     </group>
                                 </group>
 
                             </page>
                             <page string="Personal Information">
-
+                                <group>
+                                    <group>
+                                        <field name="staff_mobile_number"/>
+                                        <field name="staff_address"/>
+                                    </group>
+                                    <group>
+                                        <field name="staff_birth_date"/>
+                                    </group>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>

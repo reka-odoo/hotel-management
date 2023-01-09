@@ -6,7 +6,7 @@
             <field name="model">hotel.management.customer</field>
             <field name="arch" type="xml">
                 <tree expand="1">
-                    <field name="customer_name"/>
+                    <field name="name"/>
                     <field name="customer_mobile_number"/>
                     <field name="date"/>
                     <field name="table_number"/>
@@ -20,9 +20,9 @@
             <field name="arch" type="xml">
                 <form>
                     <sheet>
-                        <lable for="customer_name">Customer Name</lable>
+                        <lable for="name">Customer Name</lable>
                         <h1>
-                            <field name="customer_name"></field>
+                            <field name="name"></field>
                         </h1>
                         <group>
                             <group>

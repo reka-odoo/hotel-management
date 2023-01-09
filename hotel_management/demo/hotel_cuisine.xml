@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record model="hotel.cuisine" id="hotel_cuisine_multi_cuisine">
+        <field name="name">Multi Cuisine</field>
+    </record>
+    <record model="hotel.cuisine" id="hotel_cuisine_indian">
+        <field name="name">Indian</field>
+    </record>
+    <record model="hotel.cuisine" id="hotel_cuisine_bar">
+        <field name="name">Bar</field>
+    </record>
+    <record model="hotel.cuisine" id="hotel_cuisine_bakery_and_patisserie">
+        <field name="name">Bakery and Patisserie</field>
+    </record>
+    <record model="hotel.cuisine" id="hotel_cuisine_global">
+        <field name="name">Global</field>
+    </record>
+    <record model="hotel.cuisine" id="hotel_cuisine_international">
+        <field name="name">International</field>
+    </record>
+    <record model="hotel.cuisine" id="hotel_cuisine_light_refreshments">
+        <field name="name">Light Refreshments</field>
+    </record>
+    <record model="hotel.cuisine" id="hotel_cuisine_regional">
+        <field name="name">Regional</field>
+    </record>
+    <record model="hotel.cuisine" id="hotel_cuisine_contemporary_indian">
+        <field name="name">Contemporary Indian</field>
+    </record>
+    <record model="hotel.cuisine" id="hotel_cuisine_contemporary_chinese">
+        <field name="name">Chinese</field>
+    </record>
+    <record model="hotel.cuisine" id="hotel_cuisine_contemporary_japanese">
+        <field name="name">Japanese</field>
+    </record>
+</odoo>

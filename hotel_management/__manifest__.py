@@ -12,7 +12,7 @@
                 ],
     'demo': [
                 'demo/demo.xml',
-                'demo/hotel_menu_types.xml'
+                'demo/hotel_cuisine.xml'
                 ],
     'application': True,
     'installable': True
