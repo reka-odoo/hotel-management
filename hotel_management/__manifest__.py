@@ -7,13 +7,16 @@
                 'security/ir.model.access.csv',
                 'views/hotel_management_views.xml',
                 'views/hotel_management_menus.xml',
-                'views/hotel_management_customer.xml',
-                'views/hotel_management_staff.xml'
+                'views/hotel_management_orders.xml',
+                'views/hotel_management_staff.xml',
+                'views/hotel_management_chef.xml',
+                'views/hotel_management_food.xml'
                 ],
     'demo': [
                 'demo/demo.xml',
                 'demo/hotel_cuisine.xml'
                 ],
     'application': True,
-    'installable': True
+    'installable': True,
+    'license': 'LGPL-3'
 }

@@ -17,6 +17,3 @@ class hotelManagementStaff(models.Model):
     staff_salary=fields.Float(string='Staff Salary')
     staff_birth_date=fields.Date(string='Staff Birth Date')
     staff_manager=fields.Char(string='Manager')
-
-
-    

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models,fields
+from odoo import models,fields,api
 
 class hotelManagement(models.Model):
     _name = 'hotel.management'
@@ -11,16 +11,26 @@ class hotelManagement(models.Model):
     hotel_contact_number = fields.Char(string='Hotel Contact No.')
     hotel_email=fields.Char(string='Hotel Email')
     hotel_address = fields.Char(string='Address')
-    # hotel_timing=fields.Time(string='Hotel Timing')
-    # hotel_menu = fields.Selection(string = 'Hotel Menu',
-    #     selection = [('gujarati', 'Gujarati'), ('punjabi', 'Punjabi'), ('south_indian', 'South Indian'), ('chinese', 'Chinese'), ('italian', 'Italian')]
-    #     )
     postcode=fields.Integer(string='Postcode')
-    hotel_cuisine_ids = fields.Many2many("hotel.cuisine",string='Cuisine')
     hotel_type = fields.Selection(string = 'Hotel Type',
         selection = [('dinning','Dinning'), ('banquet', 'Banquet')]
         )
     restaurant=fields.Char(string='Restaurant Name')
-    # restaurant_type=fields.Char(string='Restaurant Type', selection = [()])
-    # hotel_restaurant_type=fields.Selection("Signature Restaurants", selection=[()])
+
+    #for Tag
+    hotel_cuisine_ids = fields.Many2many("hotel.management.cuisine",string='Cuisine')
+
+    #for Order Info 
+    order_id = fields.Many2one("hotel.management.orders")
+    food_items=fields.Char(string='Food Items')
+    food_price=fields.Float(string='Food Price(₹)')
+    food_quantity=fields.Integer(string='Quantity')
+    sub_total=fields.Float(string='Subtotal(₹)', compute="_compute_sub_total")
+
+    #for food
+    food_id=fields.Many2one("hotel.management.orders")
     
+    @api.depends("food_price", "food_quantity")
+    def _compute_sub_total(self):
+        for record in self:
+            record.sub_total = record.food_price * record.food_quantity

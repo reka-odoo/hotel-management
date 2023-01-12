@@ -17,23 +17,28 @@
         <field name="postcode">400013</field>
     </record>
 
-    <record model="hotel.management.customer" id="hotel_management_customer_renil">
+    <record model="hotel.management.orders" id="hotel_management_orders_renil">
         <field name="name">Renil</field>
         <field name="customer_mobile_number">1234567890</field>
         <field name="date">2022-12-29</field>
         <field name="table_number">7</field>
-        <field name="bill">10000</field>
+        <field name="total_bill">10000</field>
     </record>
-    <record model="hotel.management.customer" id="hotel_management_customer_abc">
+    <record model="hotel.management.orders" id="hotel_management_orders_abc">
         <field name="name">ABC</field>
         <field name="customer_mobile_number">0987654321</field>
         <field name="date">2022-12-30</field>
         <field name="table_number">10</field>
-        <field name="bill">5000</field>
+        <field name="total_bill">5000</field>
     </record>
     <record model="hotel.management.staff" id="hotel_management_staff_dhrumil">
         <field name="name">Dhrumil</field>
         <field name="staff_mobile_number">0987654321</field>
         <field name="staff_joining_date">2022-12-30</field>
+    </record>
+    <record model="hotel.management.chef" id="hotel_management_chef_sam">
+        <field name="name">Sam</field>
+        <field name="chef_mobile_number">1010101010</field>
+        <field name="chef_joining_date">2022-12-30</field>
     </record>
 </odoo>
