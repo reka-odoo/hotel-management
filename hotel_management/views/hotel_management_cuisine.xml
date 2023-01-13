@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="hotel_management_cuisine_tree" model="ir.ui.view">
+            <field name="name">Hotel Management Cuisine Tree</field>
+            <field name="model">hotel.management.cuisine</field>
+            <field name="arch" type="xml">
+                <tree expand="1">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        <record id="hotel_management_cuisine_form" model="ir.ui.view">
+            <field name="name">Hotel Management cuisine Form</field>
+            <field name="model">hotel.management.cuisine</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <lable for="name">Cuisine</lable>
+                        <h1>
+                            <field name="name"></field>
+                        </h1>
+                        <notebook>
+                            <page string="Add Food Items">
+                                <tree type="xml" editable="bottom">
+                                    <field name="food_items"/>
+                                    <field name="food_price"/>
+                                </tree>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

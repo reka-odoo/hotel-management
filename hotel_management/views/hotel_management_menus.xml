@@ -11,8 +11,11 @@
             <menuitem id="hotel_staff_list" action="hotel_staff_list_action"/>
             <menuitem id="hotel_chef_list" action="hotel_chef_list_action"/>
         </menuitem>
-        <menuitem id="hotel_food_menu" name="Food">
+        <!-- <menuitem id="hotel_food_menu" name="Food">
             <menuitem id="hotel_food_list" action="hotel_food_list_action"/>
+        </menuitem> -->
+        <menuitem id="hotel_cuisine_menu" name="Cuisine">
+            <menuitem id="hotel_cuisine_list" action="hotel_cuisine_list_action"/>
         </menuitem>
     </menuitem>
 </odoo>

@@ -16,17 +16,22 @@
             <field name="res_model">hotel.management.staff</field>
             <field name="view_mode">tree,form</field>
         </record>
-        <record id="hotel_food_list_action" model="ir.actions.act_window">
+        <!-- <record id="hotel_food_list_action" model="ir.actions.act_window">
             <field name="name">Food List</field>
             <field name="res_model">hotel.management.food</field>
             <field name="view_mode">tree,form</field>
-        </record>
+        </record> -->
         <record id="hotel_chef_list_action" model="ir.actions.act_window">
             <field name="name">Chef List</field>
             <field name="res_model">hotel.management.chef</field>
             <field name="view_mode">tree,form</field>
         </record>
-       
+        <record id="hotel_cuisine_list_action" model="ir.actions.act_window">
+            <field name="name">Cuisine List</field>
+            <field name="res_model">hotel.management.cuisine</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
         <record id="hotel_management_tree" model="ir.ui.view">
             <field name="name">Hotel Management Tree</field>
             <field name="model">hotel.management</field>
@@ -48,6 +53,10 @@
             <field name="arch" type="xml">
                 <form>
                     <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="%(hotel_orders_list_action)d" string="Order" type="action" class="oe_stat_button" icon="fa-pencil-square-o">
+                            </button>
+                        </div>
                         <lable for="name">Hotel Name</lable>
                         <h1>
                             <field name="name"></field>

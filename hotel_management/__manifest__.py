@@ -10,7 +10,7 @@
                 'views/hotel_management_orders.xml',
                 'views/hotel_management_staff.xml',
                 'views/hotel_management_chef.xml',
-                'views/hotel_management_food.xml'
+                'views/hotel_management_cuisine.xml'
                 ],
     'demo': [
                 'demo/demo.xml',

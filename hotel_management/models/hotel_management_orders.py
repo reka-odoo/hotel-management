@@ -17,7 +17,7 @@ class hotelManagementCustomer(models.Model):
         )
    
     #for Order Info
-    order_ids=fields.One2many("hotel.management", "order_id", string="Order Info")
+    order_ids=fields.One2many("hotel.management.cuisine", "order_id", string="Order Info")
 
     @api.depends()
     def _compute_total_bill(self):
