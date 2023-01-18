@@ -16,8 +16,11 @@ class hotelManagementCustomer(models.Model):
         selection = [('dinning', 'Dinning'), ('take_away', 'Take Away')]
         )
    
+    # #for Order Info
+    # order_ids=fields.One2many("hotel.management.cuisine", "order_id", string="Order Info")
+
     #for Order Info
-    order_ids=fields.One2many("hotel.management.cuisine", "order_id", string="Order Info")
+    order_ids = fields.One2many("hotel.management.food", "order_id", string = "Food Items")
 
     @api.depends()
     def _compute_total_bill(self):

@@ -5,7 +5,7 @@
             <field name="name">Hotel Management Cuisine Tree</field>
             <field name="model">hotel.management.cuisine</field>
             <field name="arch" type="xml">
-                <tree expand="1">
+                <tree>
                     <field name="name"/>
                 </tree>
             </field>
@@ -22,10 +22,12 @@
                         </h1>
                         <notebook>
                             <page string="Add Food Items">
-                                <tree type="xml" editable="bottom">
-                                    <field name="food_items"/>
-                                    <field name="food_price"/>
-                                </tree>
+                                <field name="food_ids">
+                                    <tree type="xml" editable="top">
+                                        <field name="food_items"/>
+                                        <field name="food_price"/>
+                                    </tree>
+                                </field>
                             </page>
                         </notebook>
                     </sheet>

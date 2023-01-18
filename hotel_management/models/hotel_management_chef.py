@@ -6,7 +6,7 @@ class hotelManagementChef(models.Model):
     _name = 'hotel.management.chef'
     _description = 'Hotel Management Chef Module'
 
-    name = fields.Char(string='Chef Name',)
+    name = fields.Char(string='Chef Name')
     chef_mobile_number=fields.Char(string='Chef Mobile Number')
     chef_address=fields.Text(string='Chef Address')
     chef_joining_date=fields.Date(string='Chef Joining Date')

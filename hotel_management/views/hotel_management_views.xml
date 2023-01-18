@@ -71,7 +71,7 @@
                             <group>
                                 <field name="hotel_type"/>
                                 <field name="hotel_email"/>
-                                <field name="hotel_cuisine_ids" widget="many2many_tags"/>
+                                <field name="hotel_cuisine_ids" widget="many2many_tags" options="{'no_create': True}"/>
                             </group>
                         </group>
                         <notebook>
