@@ -15,10 +15,7 @@ class hotelManagementCustomer(models.Model):
     order_type = fields.Selection(string='Order Type', 
         selection = [('dinning', 'Dinning'), ('take_away', 'Take Away')]
         )
-   
-    # #for Order Info
-    # order_ids=fields.One2many("hotel.management.cuisine", "order_id", string="Order Info")
-
+        
     #for Order Info
     order_ids = fields.One2many("hotel.management.food", "order_id", string = "Food Items")
 

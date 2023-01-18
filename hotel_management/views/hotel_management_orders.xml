@@ -40,8 +40,8 @@
                             <page string="Orders Info">
                                 <field name="order_ids">
                                     <tree type="xml" editable="bottom">
-                                        <field name="food_items"/>
-                                        <field name="food_price"/>
+                                        <field name="food_item_id" options="{'no_create': True, 'no_open': True}"/>
+                                        <field name="food_price_table" options="{'no_create': True, 'no_open': True}"/>
                                         <field name="food_quantity"/>
                                         <field name="sub_total"/>
                                     </tree>
