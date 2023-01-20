@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models,fields,api
+from odoo.exceptions import UserError
 
 class hotelManagementCustomer(models.Model):
     _name = 'hotel.management.orders'
@@ -32,3 +33,32 @@ class hotelManagementCustomer(models.Model):
     def _compute_total_bill(self):
         for record in self:
             record.total_bill = sum(self.order_ids.mapped('sub_total'))
+
+    def send_kitchen(self):
+        for record in self:
+            if record.state == 'canceled':
+                raise UserError("Order is Canceled.")
+            else:
+                record.state = 'in_progress'
+
+        for rec1 in self:
+            ls = []
+            ls.append(rec1.order_ids.food_item_id.food_items)
+            print(ls)
+        for rec in self:
+            self.env['hotel.management.kitchen'].create({
+                'name':rec.name,
+                't_no' : rec.table_number,
+                "tt_no": rec.date,
+
+                # "food_data":[
+                #     (
+                #         {
+                            
+                #         }
+                #     ),
+                # ],
+            
+            })
+        # return super().send_kitchen()
+

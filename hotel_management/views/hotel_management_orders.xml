@@ -21,6 +21,7 @@
                 <form>
                     <header>
                         <field name="state" widget="statusbar" options="{'clickable':'1'}"/>
+                        <button type="object" name="send_kitchen" string="Send to Kitchen"/>
                     </header>
                     <sheet>
                         <lable for="name">Customer Name</lable>

@@ -5,13 +5,16 @@
             <field name="name">Hotel Management Kitchen Tree</field>
             <field name="model">hotel.management.kitchen</field>
             <field name="arch" type="xml">
-                    <tree expand="1">
-                        <field name="name"/>
+                <tree expand="1">
+                    <field name="name" />
+                    <field name="t_no" />
+                    <field name="tt_no" />
+                    <!-- <field name="name"/>
                         <field name="customer_mobile_number"/>
                         <field name="date"/>
                         <field name="table_number"/>
-                        <field name="total_bill"/>
-                    </tree>
+                        <field name="total_bill"/> -->
+                </tree>
             </field>
         </record>
         <record id="hotel_management_kitchen_form" model="ir.ui.view">
@@ -20,10 +23,20 @@
             <field name="arch" type="xml">
                 <form>
                     <header>
-                        <field name="state" widget="statusbar" options="{'clickable':'1'}"/>
+                        <!-- <field name="state" widget="statusbar" options="{'clickable':'1'}"/> -->
                     </header>
                     <sheet>
-                        <lable for="name">Customer Name</lable>
+                        <label for="name" string="Hotel Name"></label>
+                        <field name="name" nolabel="1" />
+                        <label for="t_no" string="Table No"></label>
+                        <field name="t_no" nolabel="1" />
+
+                        <notebook>
+                            <page id ="food_data" string="Food Item">
+                                <field name="tt_no" />
+                            </page>
+                        </notebook>
+                        <!-- <lable for="name">Customer Name</lable>
                         <h1>
                             <field name="name"></field>
                         </h1>
@@ -50,7 +63,7 @@
                                     </tree>
                                 </field>
                             </page>
-                        </notebook>
+                        </notebook> -->
                     </sheet>
                 </form>
             </field>
