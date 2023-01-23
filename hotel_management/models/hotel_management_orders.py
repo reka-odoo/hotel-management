@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models,fields,api
+from odoo import models,fields,api,Command
 from odoo.exceptions import UserError
 
 class hotelManagementCustomer(models.Model):
@@ -27,7 +27,7 @@ class hotelManagementCustomer(models.Model):
     order_ids = fields.One2many("hotel.management.food", "order_id", string = "Food Items")
 
     #for kitchen Info
-    kitchen_id = fields.Many2one("hotel.management.kitchen")
+    # kitchen_id = fields.Many2one("hotel.management.kitchen",string="kitchen")
 
     @api.depends("order_ids")
     def _compute_total_bill(self):
@@ -41,20 +41,26 @@ class hotelManagementCustomer(models.Model):
             else:
                 record.state = 'in_progress'
 
-        for rec1 in self:
-            ls = []
-            ls.append(rec1.order_ids.food_item_id.food_items)
-            print(ls)
         for rec in self:
+            # ls = []
+            # ls.append(rec.order_ids.food_item_id.food_items)
             self.env['hotel.management.kitchen'].create({
                 'name':rec.name,
                 't_no' : rec.table_number,
-                "tt_no": rec.date,
+                'kitchen_ids': [
+                    Command.create({
+                        'food_item_id' : rec.order_ids.food_item_id,
+                        'food_price_table':rec.order_ids.food_price_table,                    
+                        'food_quantity' :rec.order_ids.food_quantity ,
+                        'sub_total' : rec.order_ids.sub_total,
+                        'food_price' : rec.order_ids.food_price,
+                })
+]
 
                 # "food_data":[
                 #     (
                 #         {
-                            
+                #             'tt_no': ls
                 #         }
                 #     ),
                 # ],

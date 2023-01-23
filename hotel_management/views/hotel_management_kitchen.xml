@@ -33,7 +33,16 @@
 
                         <notebook>
                             <page id ="food_data" string="Food Item">
-                                <field name="tt_no" />
+                                <group>
+                                    <field name="kitchen_ids">
+                                        <tree type="xml" editable="bottom">
+                                            <field name="food_item_id"/>
+                                            <field name="food_price_table"/>
+                                            <field name="food_quantity"/>
+                                            <field name="sub_total"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                         </notebook>
                         <!-- <lable for="name">Customer Name</lable>
