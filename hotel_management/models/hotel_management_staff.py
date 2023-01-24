@@ -11,7 +11,12 @@ class hotelManagementStaff(models.Model):
     staff_address = fields.Text(string='Staff Address')
     staff_joining_date = fields.Date(string='Staff Joining Date')
     staff_type = fields.Selection(string = 'Staff Type',
-        selection = [('waiter','Waiter'),('bartender','Bartender'),('busser','Busser'),('cashier','Cashier'),('dishwasher','Dishwasher'),('maintenance_and_cleaning_staff','Maintenance and Cleaning Staff')]
+        selection = [('waiter','Waiter'),
+                     ('bartender','Bartender'),
+                     ('busser','Busser'),
+                     ('cashier','Cashier'),
+                     ('dishwasher','Dishwasher'),
+                     ('maintenance_and_cleaning_staff','Maintenance and Cleaning Staff')]
         )
     staff_email = fields.Char(string='Staff Email')
     staff_salary = fields.Float(string='Staff Salary')

@@ -6,9 +6,9 @@
             <field name="model">hotel.management.kitchen</field>
             <field name="arch" type="xml">
                 <tree expand="1">
-                    <field name="name" />
+                    <!-- <field name="name" />
                     <field name="t_no" />
-                    <field name="tt_no" />
+                    <field name="tt_no" /> -->
                     <!-- <field name="name"/>
                         <field name="customer_mobile_number"/>
                         <field name="date"/>
@@ -22,10 +22,10 @@
             <field name="model">hotel.management.kitchen</field>
             <field name="arch" type="xml">
                 <form>
-                    <header>
+                    <!-- <header> -->
                         <!-- <field name="state" widget="statusbar" options="{'clickable':'1'}"/> -->
-                    </header>
-                    <sheet>
+                    <!-- </header> -->
+                    <!-- <sheet>
                         <label for="name" string="Hotel Name"></label>
                         <field name="name" nolabel="1" />
                         <label for="t_no" string="Table No"></label>
@@ -44,7 +44,7 @@
                                     </field>
                                 </group>
                             </page>
-                        </notebook>
+                        </notebook> -->
                         <!-- <lable for="name">Customer Name</lable>
                         <h1>
                             <field name="name"></field>
@@ -73,7 +73,7 @@
                                 </field>
                             </page>
                         </notebook> -->
-                    </sheet>
+                    <!-- </sheet> -->
                 </form>
             </field>
         </record>
