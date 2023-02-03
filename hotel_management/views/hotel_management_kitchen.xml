@@ -6,14 +6,8 @@
             <field name="model">hotel.management.kitchen</field>
             <field name="arch" type="xml">
                 <tree expand="1">
-                    <!-- <field name="name" />
-                    <field name="t_no" />
-                    <field name="tt_no" /> -->
-                    <!-- <field name="name"/>
-                        <field name="customer_mobile_number"/>
-                        <field name="date"/>
-                        <field name="table_number"/>
-                        <field name="total_bill"/> -->
+                    <field name="name"/>
+                    <!-- <field name="table_no"/> -->
                 </tree>
             </field>
         </record>
@@ -22,58 +16,30 @@
             <field name="model">hotel.management.kitchen</field>
             <field name="arch" type="xml">
                 <form>
-                    <!-- <header> -->
-                        <!-- <field name="state" widget="statusbar" options="{'clickable':'1'}"/> -->
-                    <!-- </header> -->
-                    <!-- <sheet>
-                        <label for="name" string="Hotel Name"></label>
-                        <field name="name" nolabel="1" />
-                        <label for="t_no" string="Table No"></label>
-                        <field name="t_no" nolabel="1" />
-
-                        <notebook>
-                            <page id ="food_data" string="Food Item">
-                                <group>
-                                    <field name="kitchen_ids">
-                                        <tree type="xml" editable="bottom">
-                                            <field name="food_item_id"/>
-                                            <field name="food_price_table"/>
-                                            <field name="food_quantity"/>
-                                            <field name="sub_total"/>
-                                        </tree>
-                                    </field>
-                                </group>
-                            </page>
-                        </notebook> -->
-                        <!-- <lable for="name">Customer Name</lable>
+                    <sheet>
+                        <lable for="name">Customer Name</lable>
                         <h1>
                             <field name="name"></field>
                         </h1>
                         <group>
                             <group>
-                                <field name="customer_mobile_number"/>
-                                <field name="customer_email"/>
-                                <field name="date"/>
-                            </group>
-                            <group>
-                                <field name="table_number" attrs="{'invisible': [('order_type', '=', 'take_away')]}"/>
-                                <field name="order_type"/>
-                                <field name="total_bill"/>
+                                <!-- <field name="table_no"/> -->
                             </group>
                         </group>
+
                         <notebook>
                             <page string="Orders Info">
                                 <field name="order_ids">
                                     <tree type="xml" editable="bottom">
-                                        <field name="food_item_id" options="{'no_create': True, 'no_open': True}"/>
-                                        <field name="food_price_table" options="{'no_create': True, 'no_open': True}"/>
-                                        <field name="food_quantity"/>
-                                        <field name="sub_total"/>
+                                        <!-- <field name="food_item_id" options="{'no_create': True, 'no_open': True}"/>
+                                        <field name="food_price_table" options="{'no_create': True, 'no_open': True}"/> -->
+                                        <field name="food_item_id"/>
+                                        <field name="food_price_table"/>
                                     </tree>
                                 </field>
                             </page>
-                        </notebook> -->
-                    <!-- </sheet> -->
+                        </notebook>
+                    </sheet>
                 </form>
             </field>
         </record>

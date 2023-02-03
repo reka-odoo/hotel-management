@@ -7,6 +7,8 @@ class hotelManagementCustomer(models.Model):
     _name = 'hotel.management.orders'
     _description = 'Hotel Management Orders Model'
 
+    #for Order Info
+    order_ids = fields.One2many("hotel.management.food", "order_id", string = "Food")
     name = fields.Char(string='Customer Name')
     customer_mobile_number = fields.Char(string='Mobile Number')
     customer_email = fields.Char(string='Customer Email')
@@ -23,11 +25,10 @@ class hotelManagementCustomer(models.Model):
                                         ('canceled', 'Canceled')],
                                         default='new')
         
-    #for Order Info
-    order_ids = fields.One2many("hotel.management.food", "order_id", string = "Food Items")
+    
 
     #for kitchen Info
-    kitchen_id = fields.Many2one("hotel.management.kitchen",string="kitchen")
+    # kitchen_id = fields.Many2one("hotel.management.kitchen")
 
     @api.depends("order_ids")
     def _compute_total_bill(self):
@@ -40,30 +41,20 @@ class hotelManagementCustomer(models.Model):
                 raise UserError("Order is Canceled.")
             else:
                 record.state = 'in_progress'
-
-#         for rec in self:
-#             # ls = []
-#             # ls.append(rec.order_ids.food_item_id.food_items)
-#             self.env['hotel.management.kitchen'].create({
-#                 'name':rec.name,
-#                 't_no' : rec.table_number,
-#                 'kitchen_ids': [
-#                     Command.create({
-#                         'food_item_id' : rec.order_ids.food_item_id,
-#                         'food_price_table':rec.order_ids.food_price_table,                    
-#                         'food_quantity' :rec.order_ids.food_quantity ,
-#                         'sub_total' : rec.order_ids.sub_total,
-#                         'food_price' : rec.order_ids.food_price,
-#                 })
-# ]
-
-#                 # "food_data":[
-#                 #     (
-#                 #         {
-#                 #             'tt_no': ls
-#                 #         }
-#                 #     ),
-#                 # ],
-            
-#             })
-        # return super().send_kitchen()
+            self.env['hotel.management.kitchen'].create(
+                {
+                    "name":record.name,
+                    # "table_no":record.table_number
+                    "kitchen_ids": [
+                        Command.create(
+                            {
+                                "kitchen_food_items": record.order_ids.food_item_id.food_items,
+                                # "quantity": record.order_ids.food_item_id.food_quantity,
+                                # "price_unit": record.order_ids.food_item_id.food_price
+                            }
+                        ),
+                    ],
+                }
+            )
+            # return super().send_kitchen()
+    

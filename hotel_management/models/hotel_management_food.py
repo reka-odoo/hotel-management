@@ -13,7 +13,7 @@ class hotelManagementFood(models.Model):
     food_price = fields.Float(string='Food Price(₹)')
     food_quantity = fields.Integer(string='Quantity', required=True, default=1)
     sub_total = fields.Float(string='Subtotal(₹)', compute="_compute_sub_total")
-    other_id = fields.Many2one("hotel.management.food",string = "other")
+    # other_id = fields.Many2one("hotel.management.food",string = "other")
     
     #Add Food Items in cuisine and we can see that field in orders also.
     food_price_table = fields.Float(string='Food Price (₹)', related = "food_item_id.food_price")
